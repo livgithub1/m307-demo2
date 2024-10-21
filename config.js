@@ -6,11 +6,14 @@ import cookieParser from "cookie-parser";
 import multer from "multer";
 const upload = multer({ dest: "public/uploads/" });
 import sessions from "express-session";
+import bbz307 from "bbz307";
 
 export function createApp(dbconfig) {
   const app = express();
 
   const pool = new Pool(dbconfig);
+
+  const login = new bbz307.Login("users", ["username", "password"], pool);
 
   app.engine("handlebars", engine());
   app.set("view engine", "handlebars");

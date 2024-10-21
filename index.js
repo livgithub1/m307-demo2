@@ -1,14 +1,15 @@
 import { createApp } from "./config.js";
 
+/*connection to database*/
 const app = createApp({
-  user: "autumn_star_7622",
-  host: "168.119.168.41",
-  database: "demo",
-  password: "uaioysdfjoysfdf",
-  port: 18324,
+  user: "lunliv",
+  host: "bbz.cloud",
+  database: "lunliv",
+  password: "YtCeLv3TSEcXdq5R69nM",
+  port: 30211,
 });
 
-/* Startseite */
+/* Startseite Hallooo */
 app.get("/", async function (req, res) {
   res.render("start", {});
 });
