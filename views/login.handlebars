@@ -1,7 +1,23 @@
-<form action="/login" enctype="multipart/form-data" method="post">
-  Benutzername:
-  <input type="text" name="username" /><br />
-  Passwort:
-  <input type="password" name="password" /><br />
-  <input type="submit" />
-</form>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+
+    {{#if error}}
+      <p style="color: red;">{{error}}</p>
+    {{/if}}
+
+    <form action="/login" enctype="multipart/form-data" method="post">
+      Benutzername:
+      <input type="text" name="username" /><br />
+      Passwort:
+      <input type="password" name="password" /><br />
+      <input type="submit" />
+    </form>
+
+    <p>Noch keinen Account? <a href="/register">Jetzt registrieren</a></p>
+  </body>
+</html>

@@ -1,11 +1,11 @@
-<form action="/register" enctype="multipart/form-data" method="post">
+<form action="/register" method="post">
   Name:
-  <input type="text" name="name" /><br />
-  Email:
-  <input type="text" name="email" /><br />
+  <input type="text" name="name" required /><br />
+  E-Mail:
+  <input type="text" name="email" required /><br />
   Benutzername:
-  <input type="text" name="username" /><br />
+  <input type="text" name="username" required /><br />
   Passwort:
-  <input type="password" name="password" /><br />
-  <input type="submit" />
+  <input type="password" name="password" required /><br />
+  <input type="submit" value="Registrieren" />
 </form>
