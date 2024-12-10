@@ -1,0 +1,19 @@
+<h1>Neuen Beitrag erstellen</h1>
+
+<form action="/posts" enctype="multipart/form-data" method="post">
+  <label for="title">Titel</label>
+  <input type="text" name="title" required /><br />
+
+  <label for="description">Beschreibung</label>
+  <textarea name="description" required></textarea><br />
+
+  <label for="place">Ort</label>
+  <input type="text" name="place" required /><br />
+
+  <label for="headerfoto">Foto</label>
+  <input type="file" name="headerfoto" required /><br />
+
+  <input type="submit" value="Posten" />
+</form>
+
+<a href="/intern">Zurück zu deinem Profil</a>

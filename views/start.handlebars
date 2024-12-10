@@ -1,7 +1,22 @@
-<h1>Hallo Welt!</h1>
+<h1>Willkommen auf unserer Reiseplattform!</h1>
 
-<p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
+<!-- Anzeige der Kategorien -->
+<h2>Kategorien</h2>
+<ul>
+  {{#each categories}}
+    <li><a href="/category/{{this}}">{{this}}</a></li>
+  {{/each}}
+</ul>
 
-<img src="construction.gif" width="200">
-
-{{> contactform}}
+<!-- Anzeige der Beiträge in Kacheln -->
+<h2>Unsere Reiseempfehlungen</h2>
+<div class="posts-grid">
+  {{#each posts}}
+    <div class="post-card">
+      <img src="/uploads/{{image_url}}" alt="Post Image" />
+      <h3>{{title}}</h3>
+      <p>{{description}}</p>
+      <a href="/posts/{{id}}">Mehr erfahren</a>
+    </div>
+  {{/each}}
+</div>

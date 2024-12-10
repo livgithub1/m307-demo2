@@ -1,0 +1,15 @@
+<h1>Willkommen, {{user.username}}!</h1>
+
+<h2>Deine Beiträge</h2>
+
+{{#each posts}}
+  <div class="post-item">
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+    <a href="/posts/{{id}}">Details</a>
+    <a href="/posts_edit/{{id}}">Bearbeiten</a>
+    <a href="/delete_post/{{id}}">Löschen</a>
+  </div>
+{{/each}}
+
+<a href="/posts_formular">Neuen Beitrag erstellen</a>
